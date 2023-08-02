@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Cadastro de Pessoa
+        </title>
+    </head>
+        <body>
+            <form> <!--Campos de um cadastro de pessoas ...-->
+                <fieldset>
+                    <legend>Cadastro de Pessoa</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" />
+                    <input type="button" value="Salvar" onclick="show()" />
+                </fieldset>
+            </form>
+            <script>
+                function show(){
+                    let nome = document.getElementById('nome').value();
+                    alert('O nome digitado foi ' + nome + '!');
+                }
+            </script>
+        </body>
+</html>

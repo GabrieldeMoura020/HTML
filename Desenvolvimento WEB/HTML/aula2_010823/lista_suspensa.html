@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Lista Suspensa - Select</title>
+    </head>
+    <body>
+        <select id="periodo"> <!--Cria um campo sendo possivel selecionar um icone pré-definido-->
+            <option value="M">Matutino</option>
+            <option value="V">Vespertino</option>
+            <option value="N" selected>Noturno</option> <!--Icone para criar um campo suspenso selecionavel-->
+                                               <!--Selected é uma variavel que define uma opção padrão-->
+        </select>
+        <input type="button" value="Exibir" onclick="alert(periodo.value)" />
+    </body>
+</html>

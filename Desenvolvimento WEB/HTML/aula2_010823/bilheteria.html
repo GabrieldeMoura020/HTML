@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ingresso.com</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Bilheteria</legend>
+                
+                <label for="filme">Filme:</label>
+                <br>
+                <input type="text" id="filme" />
+
+                <br>
+                <label for="qtdingresso">Quantidade de Ingresso:</label>
+                <br>
+                <input type="text" id="qtdingresso" />
+
+                <br>
+                <label for="vlringresso">Valor do Ingresso:</label>
+                <br>
+                <input type="text" id="vlringresso" />
+
+                <br><br>
+                <label>Meia Entrada</label>
+                <select id="meiaentrada"> <!--Cria um campo sendo possivel selecionar um icone pré-definido-->
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option> <!--Icone para criar um campo suspenso selecionavel-->
+                                                       <!--Selected é uma variavel que define uma opção padrão-->
+                </select>
+                <br><br>
+                <input type="button" value="Calcular" onclick="calcular()" />
+
+            </fieldset>
+        </form>
+        <script>
+            function calcular() {
+                let filme = document.getElementById('filme').value;
+                let qtdingresso = document.getElementById('qtdingresso').value;
+                let vlringresso = document.getElementById('vlringresso').value;
+                let meiaentrada = document.getElementById('meiaentrada').value;
+                let valor = "";
+
+                if(meiaentrada == "Sim"){
+                    valor = parseInt(qtdingresso) * parseInt(vlringresso)/ 2;
+                }
+                else{
+                    valor = parseInt(qtdingresso) * parseInt(vlringresso);
+                }
+
+                alert("O filme " + filme +" teve " + qtdingresso + 
+                " ingresso vendidos no valor de " + vlringresso + 
+                " totalizando: " + valor);
+            }
+        </script>
+    </body>
+</html>
